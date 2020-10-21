@@ -1,0 +1,1 @@
+export const LIST_COLLEGE='LIST_COLLEGE'
