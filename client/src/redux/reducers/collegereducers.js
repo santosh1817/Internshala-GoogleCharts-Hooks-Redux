@@ -1,7 +1,9 @@
-import {LIST_COLLEGE} from '../actions/types'
+import {LIST_COLLEGE, LIST_COLLEGE_STATE} from '../actions/types'
 
 const initialState={
-    item:[]
+    item:[],
+    list_college_state:[]
+
 }
 export default function(state=initialState,action){
     switch(action.type){
@@ -10,6 +12,11 @@ export default function(state=initialState,action){
                 ...state,
                 item:action.payload
             };
+        case LIST_COLLEGE_STATE:
+            return{
+                ...state,
+                list_college_state:action.payload
+            }
             default:
                 return state
     }

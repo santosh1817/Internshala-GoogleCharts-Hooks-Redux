@@ -20,6 +20,14 @@ router.get('/allcollege',(req,res)=>{
     })
 })
 
+router.get('/state/:state_name',(req,res)=>{
+    const state=req.params.state_name
+    College.find({state})
+    .then(colleges=>res.send(colleges))
+    .catch(err=>res.send(err))
+
+})
+
 module.exports={
     collegeRouter:router
 }

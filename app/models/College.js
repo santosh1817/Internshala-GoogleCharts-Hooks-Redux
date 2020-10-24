@@ -28,11 +28,11 @@ const collegeSchema=new Schema({
         required:true
     },
     noofstudent:{
-        type:String,
+        type:Number,
         required:true
     },
     courses:{
-        type:String,
+        type:[String],
         required:true
     }
 
